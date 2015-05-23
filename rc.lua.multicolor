@@ -60,12 +60,12 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lu
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "urxvtc" or "xterm"
-editor     = os.getenv("EDITOR") or "nano" or "vi"
+terminal   = "terminology"
+editor     = "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
-browser    = "dwb"
+browser    = "firefox"
 browser2   = "iron"
 gui_editor = "gvim"
 graphics   = "gimp"
@@ -133,9 +133,9 @@ lain.widgets.calendar:attach(mytextclock, { font_size = 10 })
 
 -- Weather
 weathericon = wibox.widget.imagebox(beautiful.widget_weather)
-yawn = lain.widgets.yawn(123456, {
+yawn = lain.widgets.yawn(2445686, {
     settings = function()
-        widget:set_markup(markup("#eca4c4", forecast:lower() .. " @ " .. units .. "°C "))
+        widget:set_markup(markup("#eca4c4", forecast:lower() .. " @ " .. units .. "°F "))
     end
 })
 
